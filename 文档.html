@@ -1,0 +1,636 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6014dd5a-1346-462d-a4fb-b50ef8279ce3" class="page sans"><header><h1 class="page-title"></h1></header><div class="page-body"><h1 id="557de645-0ba3-4958-826c-ff82ebc95620" class="">小程序</h1><h2 id="d057b213-8b9a-4f4c-9368-d91ab29a03e3" class="">首页</h2><p id="2cdf7044-9fd4-4735-ba0c-24c72c0301fe" class="">
+</p><figure id="f0b5badf-c3ce-4e20-9725-ad07eeadbe30" class="image"><a href="文档/Untitled.png"><img style="width:288px" src="文档/Untitled.png"/></a></figure><p id="12f0ebde-dc10-4ba1-87ec-09e090fba235" class="">
+</p><figure id="bad77879-805c-4a4b-bec6-9b2441535c95" class="image"><a href="文档/Untitled%201.png"><img style="width:288px" src="文档/Untitled%201.png"/></a></figure><p id="a9dd606b-e486-454f-baa0-80a289f22f99" class="">
+</p><figure id="486d2dd4-fcc1-45ce-966f-7a171b374e55" class="image"><a href="文档/Untitled%202.png"><img style="width:288px" src="文档/Untitled%202.png"/></a></figure><h2 id="d1776c57-b11c-451a-ba76-e25ffe63baa2" class="">页面结构</h2><p id="6fd15a2a-c4da-4d96-a553-20c280fda55a" class="">首页最上面是一个图片，下面有四个模块：体检预约、医学视频、医院指南、科普文章。每个模块结构大致如下：</p><p id="52cca252-4d96-4fa1-b9ee-641e3c7a7c3e" class="">
+</p><figure id="2ff990cc-8507-42e4-a943-b7769a202d12" class="image"><a href="文档/Untitled%203.png"><img style="width:471px" src="文档/Untitled%203.png"/></a></figure><p id="83bbc71b-c4e2-47c6-afb8-535271fbb2f6" class="">一个图标、两三行简介、一些详细的内容，体检预约下是套餐的名字。</p><p id="4313d2d3-429f-4f00-8545-ee9e293c9135" class="">简介现在没有内容。</p><p id="864888ce-c907-4c2e-a95c-3426247f7ca9" class="">点击会跳转到相应的页面。</p><p id="4fddd374-7b57-4dda-9e0a-1a8d4d39eb7a" class="">因为这部分内容基本上不会变，直接写在WXML文件里。</p><h2 id="59d51c8f-6b50-4b3e-8765-141ba94324bd" class="">体检预约</h2><p id="7b07a8c6-d664-4ede-9101-9d42476e7f33" class="">
+</p><figure id="b23b3ab1-194c-46d8-ac3e-452e69584000" class="image"><a href="文档/Untitled%204.png"><img style="width:240px" src="文档/Untitled%204.png"/></a></figure><p id="7c064fc4-9e7a-46a4-ad5d-0b5617a96b51" class="">体检预约见面就是套餐的展示，点击购买按钮后如果没有登录过会出现微信授权页面：</p><figure id="243fb600-8de5-46ab-8f58-3a564cb534a5" class="image"><a href="文档/Untitled%205.png"><img style="width:240px" src="文档/Untitled%205.png"/></a></figure><p id="2178cd4a-dffb-4527-aec8-3f71e8ae1c53" class="">授权过了会出现一个弹窗，要求用户填写信息</p><figure id="e028c52c-8ce7-4262-ac45-0b5f64d286b0" class="image"><a href="文档/Untitled%206.png"><img style="width:240px" src="文档/Untitled%206.png"/></a></figure><p id="91ac76d3-70b5-4366-a696-0e63e3cc690a" class="">信息填完后会出现付款界面</p><figure id="bff2ec64-ebb2-4670-b1d9-2e3d1d0c8ae0" class="image"><a href="文档/Untitled%207.png"><img style="width:240px" src="文档/Untitled%207.png"/></a></figure><p id="475a8fb8-8dc0-401a-93d2-0440ff299cb1" class="">付款成功后会出现提示框，提示用户需要联系客服</p><figure id="6861ac2c-551c-43d9-b3ac-e465986fca34" class="image"><a href="文档/Untitled%208.png"><img style="width:240px" src="文档/Untitled%208.png"/></a></figure><p id="4bbf4819-14d2-4aef-a4df-4f5d046d38d3" class="">点击套餐的图片，会跳转到相应的详细界面</p><h2 id="4d1f3694-daaf-416e-aa3f-22166f2e72af" class="">套餐详情界面</h2><figure id="6fd1737e-38c7-429b-b0c5-f496f5c79277" class="image"><a href="文档/Untitled%209.png"><img style="width:240px" src="文档/Untitled%209.png"/></a></figure><p id="f747bf8d-a14d-4a17-b65c-97bcf6428971" class="">套餐详情界面由套餐简介和底部的提交订单栏组成，上图是已经登录的情况，未登录时，按钮不能点击，并在上面出现黄色一栏提示用户授权登录</p><figure id="5db9bd57-4642-4420-a175-2d74666224c9" class="image"><a href="文档/Untitled%2010.png"><img style="width:384px" src="文档/Untitled%2010.png"/></a></figure><p id="b1127ba7-4c25-4ecd-be6c-8a376111c724" class="">点击黄色一栏，出现弹窗提示用户登录</p><p id="0c1076a2-f35c-4375-a1cb-6f37a03f53e2" class="">
+</p><figure id="98777102-1085-49d0-8bba-0343a2342529" class="image"><a href="文档/Untitled%2011.png"><img style="width:336px" src="文档/Untitled%2011.png"/></a></figure><p id="24cb20db-d45a-4861-ada5-0001996a3ca1" class="">
+</p><p id="20d14024-08f8-4eeb-a501-d6d0fa2aaf54" class="">在点击提交订单后会出现和体检预约见面点击购买按钮后同样的窗口</p><p id="c4fee7ba-8342-4aa8-9def-9d063d311208" class="">
+</p><figure id="6b983933-0cbc-47ed-bff3-cf1cb318cd65" class="image"><a href="文档/Untitled%2012.png"><img style="width:336px" src="文档/Untitled%2012.png"/></a></figure><h2 id="b9773a93-6ef3-4517-9e48-34000321d769" class="">医学视频</h2><p id="c4398de1-31b9-44f1-b0dc-ca901941c26f" class="">只是高老师规划要有这个页面，目前无视频</p><figure id="58ebaeff-4e0a-423b-92cc-edf4fb8a47a4" class="image"><a href="文档/Untitled%2013.png"><img style="width:288px" src="文档/Untitled%2013.png"/></a></figure><h2 id="55dda787-c6ec-41ef-8200-e32912ba8de2" class="">医院指南</h2><p id="23ef38f7-b920-4fe9-b39c-ee4f737e7968" class="">进入页面指南时会提示用户授予位置权限用于获取用户当前位置和医院的距离</p><figure id="47cd82d7-eff0-4304-a662-ab5a2346e91a" class="image"><a href="文档/Untitled%2014.png"><img style="width:288px" src="文档/Untitled%2014.png"/></a></figure><figure id="d28d5912-1031-4c9b-8be7-9574c2c11c56" class="image"><a href="文档/Untitled%2015.png"><img style="width:288px" src="文档/Untitled%2015.png"/></a></figure><h2 id="56f9e5d1-7673-491d-b65e-bdffadb693ca" class="">科普文章</h2><p id="e8fadd21-65c1-4753-a71d-09a20742c298" class="">科普文章界面是太铭的公众号文章</p><figure id="ecf1be9f-e9be-4586-afc5-a8a9e5e11076" class="image"><a href="文档/Untitled%2016.png"><img style="width:288px" src="文档/Untitled%2016.png"/></a></figure><p id="27890bcb-7045-4237-ba61-657dc9bb1e9e" class="">点击文章会弹出相应的文章</p><p id="c75a08ca-1d0e-4bd9-b9b3-ffab9d6bd0d8" class="">
+</p><figure id="0ff2e4aa-54ab-42f7-9736-77577242428a" class="image"><a href="文档/Untitled%2017.png"><img style="width:336px" src="文档/Untitled%2017.png"/></a></figure><h2 id="c2add720-f493-4df5-9dbc-986c4955d790" class="">个人中心</h2><figure id="66403e94-fc3d-4ba6-9b69-2a31a7c16d11" class="image"><a href="文档/Untitled%2018.png"><img style="width:336px" src="文档/Untitled%2018.png"/></a></figure><p id="80a614d3-0f46-481d-957a-657e8504c434" class="">登陆后显示用户头像</p><figure id="f264c999-1ab0-4c69-b6ea-0d00b3a8e6a2" class="image"><a href="文档/Untitled%2019.png"><img style="width:336px" src="文档/Untitled%2019.png"/></a></figure><p id="5bb45b07-ab0c-4916-8e82-9be1a143b337" class="">当前订单详情：显示用户订单的进度</p><p id="531e2a63-faaf-43a5-9a28-cfe33d2c998e" class="">健康报告：会呈现体检套餐预测的结果，目前没有</p><p id="5a87adb4-9cfd-4555-965b-f8a8157c5516" class="">联系客服：用户在套餐购买后应该联系客服进行一些沟通，点击会出现客服界面</p><p id="bd2fba52-6b0f-4cf6-8be3-5a9176d1ff0f" class="">我的优惠券： 无</p><p id="ea41fb15-9e70-4a04-975e-32ac44b9e08e" class="">意见反馈： 无</p><p id="2c4a69bf-31b9-40fb-88d6-7d821bb92467" class="">联系我们： 无</p><h1 id="26b43b30-128b-4897-879a-4b42113446c2" class="">后端</h1><p id="cd324a89-4a08-4090-9e9e-8754a2bcc9a4" class="">koa2搭建的后端，</p><p id="625f3029-0a7d-4720-a832-8b42c46e020f" class="">api文档：</p><p id="f871eeac-69a0-4956-bf61-bfa8c760b282" class=""><a href="https://www.showdoc.com.cn/1110147619285758?page_id=5668915001392255">https://www.showdoc.com.cn/1110147619285758?page_id=5668915001392255</a></p><h1 id="b2e33f50-9c69-4948-a6bc-f6d480b57b3e" class="">管理员提交进度网页</h1><p id="e6dbf09d-f0fc-4015-a87f-7e83c32cbe39" class="">需要一个提交提血、建库、测序、分析进度的网页，提交了之后能过在小程序中的当前订单进度页面中呈现出来，</p><figure id="f7239881-9196-4a8e-bc6d-86fae3ecc569" class="image"><a href="文档/Untitled%2020.png"><img style="width:1831px" src="文档/Untitled%2020.png"/></a></figure><p id="d8389c14-9e7d-4968-8aaa-c509f4a2fbae" class="">用户可以登录，登录之后是提交流水的页面，这部分的逻辑还有些问题，没有完成</p><figure id="b7a5733c-03c7-4a0b-a199-e7a51fb14d6e" class="image"><a href="文档/Untitled%2021.png"><img style="width:1831px" src="文档/Untitled%2021.png"/></a></figure></div></article></body></html>
