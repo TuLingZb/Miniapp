@@ -1,0 +1,86 @@
+span{
+       font-family:"Microsoft calibri";
+       font-size: 14px;
+}
+
+body{
+      font-family:"@方正正中黑简体";
+      font-size:24px;
+      line-height:2em;
+      text-align:center;
+}
+
+#page{
+  position: absolute;
+  right: 130px;
+  top: 0px;
+  color:#2CB1BC;
+  font-size:9px;
+}
+
+.youduiqi{
+        width: 680px;
+        margin: 0 auto;
+        height:1000px;
+        padding: 30px;
+}
+.youduiqi table{
+        text-align: center;
+}
+.tablect{
+        width: 600px;
+        margin-left: -30px;
+
+        /*left: 10%;*/
+        /*left: 30%;*/
+        /*position:absolute*/
+}
+
+table td {
+    width:50px;
+    height:10px;
+    line-height: 25px;
+
+}
+.form_name{
+    text-align: right;
+    /*width: 50px;*/
+}
+.right {
+    margin-left: -80px;
+}
+.header{
+      font-family:"Microsoft Songti";
+      font-size: 14px;
+}
+.odd{
+      font-family: "Microsoft Songti";
+      font-size: 14px;
+}
+.even{
+      font-family: "Microsoft Songti";
+      font-size: 14px;
+}
+.stl_01 {
+	position: relative;
+      white-space: nowrap;
+}
+.stl_09 {
+      letter-spacing: 0em;
+ 
+}
+.stl_19 {
+	font-size: 14px;
+	font-family: "OIMTEP+MicrosoftYaHei", "Times New Roman";
+      color: #2CB1BC;
+
+}
+.stl_20 {
+      line-height: 1.319824em;
+
+}
+.stl_21 {
+	font-size:14px;
+	font-family: "HCBRNO+MicrosoftYaHei";
+      color: #2CB1BC;
+}

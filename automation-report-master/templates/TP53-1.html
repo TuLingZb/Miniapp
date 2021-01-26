@@ -1,0 +1,45 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="TP53-1.css">
+</head>
+<body>
+    <p id="page">- &nbsp;1&nbsp; -</p>
+    <div class="youduiqi">
+        <p style="text-align: left;"><img src="timing.png" width="102" height="46"  /></p>
+        <p><img src="backimg.png" alt="IMG_256" width="680" height="1100" /></p>
+        <div style="position:absolute;top:60%;left:33%;">
+            <p style="font-weight: bold;text-align: left">检测结果</p>
+            <table cellspacing="0" class="tablect">
+            <tbody>
+            <tr class="odd">
+                <td class="form_name">姓名：</td>
+                <td style="font-weight: normal">{{ patient_info.name }}</td>
+                <td class="form_name right">性别：</td>
+                <td style="font-weight: normal">{{ patient_info.sex }}</td>
+            </tr>
+            <tr class="odd">
+            <td class="form_name">年龄：<span></span></td>
+            <td style="font-weight: normal">{{ patient_info.age }}</td>
+                <td class="form_name right">样本编号：<span></span></td>
+            <td style="font-weight: normal">{{ patient_info.number }}</td>
+            <tr class="odd">
+            <td class="form_name">样本类型：</td>
+            <td style="font-weight: normal">{{ patient_info.form }}</td>
+                <td class="form_name right">采样日期：<span></span></td>
+            <td style="font-weight: normal">{{ patient_info.date }}</td>
+            </tr>
+
+            </tbody>
+            </table>
+            <p style="font-weight: bold;text-align: left">癌症风险预测说明：</p>
+            <p style="font-size: 14px;width:50%;min-height: 200px;line-height:200%;text-align: left">癌症风险预测值是基于大量采样数据计算得出，即对检测用户进行多种癌症潜在风险预测，当值大小于50%时表示用户具有较低风险患该疾病,(若检测者具有癌症病史，表明癌症发展情况稳定或接受治疗得到稳定控制；若检测者未有患病情况，表明短期内检测者具有较低风险患有该疾病)，当值大于50%时表示用户具有较高风险患该疾病，当值大于80%时表示用户具有极高风险患该疾病。</p>
+            <p style="position:absolute;margin-right: 10%;bottom: -43%;right:52%"><img src="result.png" style="width: 400px;height: 180px;"></p>
+            <p style="position:absolute;margin-right: 10%;bottom: -43%;left:40%"><img src="humanbody.png" style="width: 150px;height: 200px;"></p>
+        </div>
+    </div>
+</body>
+</html>
